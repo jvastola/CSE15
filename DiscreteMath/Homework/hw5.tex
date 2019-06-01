@@ -1,0 +1,90 @@
+
+
+\documentclass[12pt]{article}
+
+\usepackage[margin = 0.5in]{geometry}
+
+\usepackage{amsmath}
+\title{Homework 5}
+
+\author{Johnny Vastola}
+
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+
+
+\textbf{Complexity Analysis}\\
+\indent Derive a complexity function for the following algorithms:\\
+
+\indent 1.\indent def doNothing(someList):\\
+\indent \indent \indent return False\\
+\indent Solution: O(1)\\
+
+\indent 2. \indent def doSomething(someList):\\
+\indent \indent \indent if len(someList) == 0:\\
+\indent \indent \indent \indent return 0\\
+\indent \indent \indent else if len(list == 1):\\
+\indent \indent \indent \indent return 1\\
+\indent \indent \indent else:return doSomething(someList[1:]) \\
+\indent Solution: O(n)
+
+\indent 3. \indent def doSomethingElse(someList):\\
+\indent \indent \indent n = len(someList)\\
+\indent \indent \indent for i in range(n):\\
+\indent \indent \indent \indent for j in range(n):\\
+\indent \indent  \indent \indent \indent if someList[i] $>$ someList[j]:\\
+\indent \indent  \indent \indent \indent \indent temp = someList[i]\\
+\indent \indent\indent\indent \indent \indent someList[i] = someList[j]\\
+\indent \indent \indent \indent \indent\indent someList[j] = temp\\
+\indent \indent  \indent return someList\\
+\indent Solution: O($n^2$)\\
+
+\textbf{Order of Complexity}\\
+\indent Prove the following:\\
+\begin{enumerate}
+\item 
+$f(n) = 3n + 2 \in O(n)$\\
+$Proof:$ By the Big-O definition, f(n) is O(n) if f(n) $\leq$ cn
+ for some n $\geq$ k.\\ Let us check this condition: 3n+2 $\geq$ cn then (3n+2)/n $\geq$ c.\\ Therefore, the Big-O condition holds for n $\geq $n0 = 1 and c $\leq$ 5, (3+2) at complexity O(n)
+\item
+$g(n) = 7 \in O(1)$\\
+$Proof:$ by Big-Oh definition, g(n) is O(1) if g(n)$\leq$ c for some n $\geq$ k.\\ Checking this: 7 $\leq$c.\\ Therefore Big-O holds for n $\geq$ 1 and c$\geq$ 7 at complexity O(1)
+\item
+$h(n) =n^2+ 2n+ 4\in O(n^2)$\\
+$Proof:$ By the Big-O definition h(n)  is $O(n^2)$ if h(n)$\leq c*n^2$.\\ So $n^2+2n+4 \leq c*n^2$ or $1+2/n+4/n^2 \leq c$.\\ Therefore, Big-O holds for c $\geq$ 7, (1+2+4) and  n $\geq$ 1 at complexity O($n^2$)
+
+\end{enumerate}
+
+\textbf{Mathematical Induction}\\
+\indent Use mathematical induction to show that the following results hold for all positive integers.\\
+\begin{enumerate}
+\item
+$1 + 2 + 3 +. . .+n = n(n+1)/2$\\
+n=1: 1=1(2)/2=1 checks.\\
+n=k assumption: 1+2+...+k=k(k+1)/2\\
+n=k+1 showing: 1+2+...+k+(k+1)=(k+1)((k+1)+1)/2 \\
+  left side= k(k+1)/2+(k+1) by the Induction Hypothesis \\
+  left side =(k(k+1)+2(k+1))/2 by 2/2=1 and distridution of division over addition \\
+  left side=(k+2)(k+1)/2 by distribution of multiplication over addition \\
+ left side =(k+1)((k+1)+1)/2 by commutativity of multiplication \\
+ left side= right side
+\item
+$2 + 2^2+ 2^3+ 2^4+. . .+ 2^n= 2^{n-1} - 2$\\
+n=1: $2^1=2^2-2=2 checks$
+n=k assumption:
+$2 + 2^2+ 2^3+ 2^4+. . .+ 2^k= 2^{k-1} - 2$\\
+n=k+1 showing:
+$2 + 2^2+ 2^3+ 2^4+. . .+ 2^k + 2^{k+1}= 2^{k+1-1} - 2$\\
+left side= $[2 + 2^2+ 2^3+ 2^4+. . .+ 2^k] + 2^{k+1}$\\
+left side= $[2^{k+1}-2] + 2^{k+1}$\\
+left side= $2*2^{k+1}-2$\\
+left side= $2^1*2^{k+1}-2$\\
+left side= $*2^{k+1+1}-2$\\
+left side= right side
+\end{enumerate}
+
+\end{document}

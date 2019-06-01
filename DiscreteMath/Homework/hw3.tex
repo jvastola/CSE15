@@ -1,0 +1,144 @@
+
+
+\documentclass[12pt]{article}
+
+\usepackage[margin = 0.5in]{geometry}
+
+\usepackage{amsmath}
+\title{Homework 3}
+
+\author{Johnny Vastola}
+
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+
+
+\textbf{Knights and Knaves}
+
+\begin{enumerate}
+
+\item
+One day a traveller was wandering around the island of Knights and Knaves, when he encountered two local inhabitants,P and Q.  The traveller asked: "Is any of you a knave?".P replied:  "At least one of us is a knave".\\
+
+Can you find our what P and Q are? If so, what are they? If not, explain why not, and what other information would you need to know.\\
+
+\textit{P is a knight, Q is a knave}
+\item
+Later on, the traveller met two other locals, A and B.  He asked whether either of them is a knight. A replied:  "If Bis a knave, then I am a knave too".\\
+
+What are A and B?\\
+
+\textit{A is unknown while B must be a knight}
+
+\end{enumerate}
+
+
+
+\textbf{Logical Identities}\\
+
+\indent Simplify the following propositions. Show all steps of your solutions.\\
+
+\begin{enumerate}
+\item
+$\neg(p \to (q \to p))$ \\
+$\neg(\neg p \land (q \to p))$\\
+$p \land \neg (q \to p))$\\
+$p \land \neg (\neg q \lor p)$\\
+$p \land (q \land \neg p)$\\
+$p \land \neg p \land q$\\
+$p \land \neg p = False $\\
+$False \land q = False $\\
+
+\item
+$\neg((p \land q) \to (q \lor p))$\\
+$\neg(\neg (p \land q) \lor (q \lor p))$\\
+$(p \land q) \land \neg (q \lor p)$\\
+$(p \land q) \land \neg q \land \neg p$\\
+$(p \land \neg p) \land \neg q \land \neg q$\\
+$False = False$
+
+\end{enumerate}
+
+\textbf{Logical Equivalences}\\
+
+\indent Determine whether or not the following pairs of propositions are equivalent. Show all steps.\\
+
+\begin{enumerate}
+
+
+
+\item
+
+p $\to$ (q $\to$ r) and (p $\land$ q) $\to$ r
+
+
+
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+$q$ & $r$ & $p$ & $q \to r$ & $p \land q$ & $p \to (q \to r)$ & $(p \land q) \to r$ \\
+\hline
+F & F & F & T & F & T & T \\
+F & F & T & T & F & T & T \\
+F & T & F & T & F & T & T \\
+F & T & T & T & F & T & T \\
+T & F & F & F & F & T & T \\
+T & F & T & F & T & F & F \\
+T & T & F & T & F & T & T \\
+T & T & T & T & T & T & T \\
+\hline
+\end{tabular}
+
+The final two columns depicting the pair of propositions are equivalent
+\item
+
+p $\to$ (q $\to$ r) and (p $\to$ q) $\to$ r
+
+
+
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+$q$ & $r$ & $p$ & $q \to r$ & $p \to q$ & $p \to (q \to r)$ & $(p \to q) \to r$ \\
+\hline
+F & F & F & T & T & T & F \\
+F & F & T & T & F & T & T \\
+F & T & F & T & T & T & T \\
+F & T & T & T & F & T & T \\
+T & F & F & F & T & T & F \\
+T & F & T & F & T & F & F \\
+T & T & F & T & T & T & T \\
+T & T & T & T & T & T & T \\
+\hline
+\end{tabular}
+
+The pair of propositions are not equivalent as the final two columns depict
+\end{enumerate}
+
+\textbf{Logical Consequence}\\
+
+\indent Determine if the following inferences are valid. Explain why. or why not.\\
+
+\begin{enumerate}
+
+
+
+\item
+
+Jimmy is smart\\
+\underline{Smart people are rich}\\
+Jimmy is rich\\
+
+This is a valid argument because it is impossible for the conclusion to be false if we assume the premises are true.
+\item
+
+Islands are surrounded by water\\
+\underline{Puerto Rico is surrounded by water}\\
+Puerto Rico is an island\\
+
+This is not valid because being an island is a subset of being surrounded by water therefore you cant infer that something (Puerto Rico) is an island because it is surrounded by water
+\end{enumerate}
+
+\end{document}

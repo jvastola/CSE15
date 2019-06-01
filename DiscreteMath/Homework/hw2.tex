@@ -1,0 +1,77 @@
+\documentclass[12pt]{article}
+\title{Homework 2}
+\author{Johnny Vastola}
+\date{\today}
+
+\begin{document}
+\maketitle
+\section{Knowledge Representation}
+\paragraph{1.}
+It is not cloudy and it is not raining.
+
+\subparagraph{Solution}
+Let $\neg p$ = it is not cloudy, and let $q$ = it is not raining, then $\neg p \lor \neg q$
+
+\paragraph{2.}  I like to eat apples and bananas.
+\subparagraph{Solution}
+Let $p$ = I like to eat apples, and let $q$ = I like to eat bananas, then $p \land q$
+
+\paragraph{3.} Behind the clouds the sun is shining.
+\subparagraph{Solution}
+Let $p$ = Behind the clouds the sun is shining, then $p$
+
+\paragraph{4.} If a function is differentiable then the function is continuous.
+\subparagraph{Solution}
+Let $p$ = If a function is differentiable, and let $q$ = the function is continuous, then $p \rightarrow q$
+
+\paragraph{5.} I will study for the final otherwise I will fail.
+\subparagraph{Solution}
+Let $p$ = I will study for the final, and let $q$ = I will fail, then $p \rightarrow \neg  q$
+\section{Equivalence in Propositional Logic}
+\begin{enumerate}
+  \item $p \land q$  and  $p \lor \neg q$
+  Not equivalent, the first statement requires both to be true while the second only needs one to be true if p = false and q = false then 1 yields false while 2 yields true.
+  
+  \item $p \lor q$  and $ \neg p \lor \neg q$
+  Not equivalent, implying the opposite case. The only time the proposition yields false is when both q and p are false and only true if q and q are true.
+  \item $p \rightarrow q$  and $\neg q \rightarrow \neg p$
+  Equivalent
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+$q$ & $p$ & $ \lnot q$ & $ \lnot p$ & $p \to q$ & $ \lnot q \to  \lnot p$ \\
+\hline
+0 & 0 & 1 & 1 & 1 & 1 \\
+0 & 1 & 1 & 0 & 0 & 0 \\
+1 & 0 & 0 & 1 & 1 & 1 \\
+1 & 1 & 0 & 0 & 1 & 1 \\
+\hline
+\end{tabular}
+  \item $p \rightarrow q$  and $ \neg p \lor q$
+  Equivalent
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+$p$ & $q$ & $ \lnot p$ & $p \to q$ & $ \lnot p \lor q$ \\
+\hline
+0 & 0 & 1 & 1 & 1 \\
+0 & 1 & 1 & 1 & 1 \\
+1 & 0 & 0 & 0 & 0 \\
+1 & 1 & 0 & 1 & 1 \\
+\hline
+\end{tabular}
+  \item $ \neg (p \land q)$   and $ \neg p \lor \neg q$
+  Equivalent
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+$p$ & $q$ & $ \lnot p$ & $ \lnot q$ & $p \land q$ & $ \lnot p \lor \lnot q$ & $ \lnot (p \land q)$ \\
+\hline
+0 & 0 & 1 & 1 & 0 & 1 & 1 \\
+0 & 1 & 1 & 0 & 0 & 1 & 1 \\
+1 & 0 & 0 & 1 & 0 & 1 & 1 \\
+1 & 1 & 0 & 0 & 1 & 0 & 0 \\
+\hline
+\end{tabular}
+\end{enumerate}
+
+
+\end{document}
+
